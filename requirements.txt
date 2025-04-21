@@ -1,0 +1,10 @@
+boto3==1.37.37
+google-adk==0.2.0
+litellm==1.67.0
+duckduckgo_search==8.0.1
+langchain==0.3.23
+langchain-aws==0.2.21
+langchain-community==0.3.21
+faiss-cpu==1.10.0
+llama-index==0.12.31
+requests==2.32.3

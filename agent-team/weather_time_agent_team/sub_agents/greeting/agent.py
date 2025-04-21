@@ -6,7 +6,7 @@ from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
 import litellm
-# litellm._turn_on_debug()
+litellm._turn_on_debug()
 
 
 def say_hello(name: str = "there") -> str:
@@ -49,5 +49,3 @@ greeting_agent = Agent(
   ),
   tools=[say_hello]
 )
-
-root_agent = greeting_agent

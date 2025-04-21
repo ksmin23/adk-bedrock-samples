@@ -11,7 +11,7 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 
 import litellm
-# litellm._turn_on_debug()
+litellm._turn_on_debug()
 
 from .sub_agents.farewell import farewell_agent
 from .sub_agents.greeting import greeting_agent
@@ -89,7 +89,7 @@ root_agent = Agent(
     "2. 'farewell_agent': Handles simple farewells like 'Bye', 'See you'. Delegate to it for these. "
     "Analyze the user's query. If it's a greeting, delegate to 'greeting_agent'. If it's a farewell, delegate to 'farewell_agent'. "
     "If it's a weather request, handle it yourself using 'get_weather'. "
-    "If it's a time request, handle it yourself using 'get_weather'. "
+    "If it's a time request, handle it yourself using 'get_current_time'. "
     "For anything else, respond appropriately or state you cannot handle it."
   ),
   tools=[get_weather, get_current_time], # Root agent still needs the weather tool for its core task

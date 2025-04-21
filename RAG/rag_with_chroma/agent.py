@@ -2,11 +2,11 @@
 # -*- encoding: utf-8 -*-
 # vim: tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
+import os
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 from langchain_aws import BedrockEmbeddings
 from langchain_chroma import Chroma
-from langchain_aws import BedrockEmbeddings
 
 import litellm
 # litellm._turn_on_debug()
@@ -68,7 +68,7 @@ ask_chroma_retrieval = ChromaRetrieval(
   collection_name='kb_for_rag'
 )
 
-model_id = 'anthropic.claude-3-sonnet-20240229-v1:0'
+model_id = os.environ.get('BEDROCK_MODEL_ID', 'anthropic.claude-3-5-sonnet-20240620-v1:0')
 model = f'bedrock/{model_id}'
 bedrock_model = LiteLlm(
   model=model

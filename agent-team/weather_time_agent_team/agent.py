@@ -2,6 +2,7 @@
 # -*- encoding: utf-8 -*-
 # vim: tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
+import os
 import datetime
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent
@@ -11,7 +12,7 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 
 import litellm
-litellm._turn_on_debug()
+# litellm._turn_on_debug()
 
 from .sub_agents.farewell import farewell_agent
 from .sub_agents.greeting import greeting_agent
@@ -67,8 +68,7 @@ def get_current_time(city: str) -> dict:
   )
   return {"status": "success", "report": report}
 
-
-model_id = 'anthropic.claude-3-sonnet-20240229-v1:0'
+model_id = os.environ.get('BEDROCK_MODEL_ID', 'anthropic.claude-3-5-sonnet-20240620-v1:0')
 model = f'bedrock/{model_id}'
 bedrock_model = LiteLlm(
   model=model

@@ -5,8 +5,6 @@
 import os
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
-from langchain_aws import BedrockEmbeddings
-from langchain_aws import ChatBedrock as BedrockChat
 from langchain_aws import AmazonKnowledgeBasesRetriever
 
 import litellm

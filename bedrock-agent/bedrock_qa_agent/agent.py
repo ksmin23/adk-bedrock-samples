@@ -21,12 +21,9 @@ bedrock_model = LiteLlm(
   }
 )
 
-basic_agent = LlmAgent(
+root_agent = LlmAgent(
   model=bedrock_model,
   name="bedrock_qa_agent",
   instruction="You are a fast and helpful assistant.",
   tools=[],
 )
-
-root_agent = basic_agent
-

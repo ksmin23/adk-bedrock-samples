@@ -26,7 +26,7 @@ async def get_tools_async():
     connection_params=StdioServerParameters(
       command='python3', # Command to run the server
       args=[
-        f"{os.environ['MCP_SERVER_PATH']}/adk_mcp_server.py"
+        f"{os.environ['MCP_SERVER_PATH']}"
       ],
     )
     # For remote servers, you would use SseServerParams instead:

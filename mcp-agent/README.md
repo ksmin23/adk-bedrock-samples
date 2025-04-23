@@ -12,10 +12,16 @@ This example exposes the `load_web_page` ADK tool through the MCP server.
    Replace `BEDROCK_MODEL_ID` and `MCP_SERVER_PATH` with your actual ones.
 2. Run your Agent.
 
-   Using the terminal, navigate to the parent directory of your agent project:
+   Using the terminal, navigate to the parent directory of your agent project (e.g. using `cd mcp-agent`)::
 
    ```
-   cd app
+    mcp-agent/      <-- navigate to this directory
+       mcp_agent/
+           __init__.py
+           agent.py
+           .env
+       mcp_server/  <-- mcp server directory
+           adk_mcp_server.py
    ```
 
    Run the following command to launch the **dev UI**.

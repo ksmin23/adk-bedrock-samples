@@ -9,3 +9,4 @@ faiss-cpu==1.10.0
 llama-index==0.12.31
 requests==2.32.3
 mcp==1.6.0
+fastmcp==2.2.5

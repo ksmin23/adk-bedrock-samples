@@ -9,7 +9,7 @@ from google.adk.tools.langchain_tool import LangchainTool
 from langchain_community.tools import DuckDuckGoSearchResults
 
 import litellm
-litellm._turn_on_debug()
+# litellm._turn_on_debug()
 
 
 # Instantiate LangChain tool

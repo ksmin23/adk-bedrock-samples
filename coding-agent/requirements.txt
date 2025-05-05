@@ -1,0 +1,9 @@
+boto3==1.37.37
+duckduckgo-search==8.0.1
+google-adk==0.2.0
+langchain-aws==0.2.21
+langchain-community==0.3.21
+litellm==1.67.0
+python-dotenv==1.1.0
+mcp-flight-search==0.2.1
+mcp-hotel-search==0.1.2

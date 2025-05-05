@@ -7,6 +7,7 @@ langchain-aws==0.2.21
 langchain-community==0.3.21
 faiss-cpu==1.10.0
 llama-index==0.12.31
+python-dotenv==1.1.0
 requests==2.32.3
 mcp==1.6.0
 fastmcp==2.2.5
